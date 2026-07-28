@@ -43,9 +43,9 @@ work decomposes into:
    much cheaper system could execute.
 
 ## The owner-intervention arcs (the paper's spine)
-Four times, the human owner identified a failure mode the standing rules
-could not express, and each closure created the vocabulary the next
-intervention needed:
+Six times, the human owner identified a failure mode the machine could not
+see from inside its frame; a seventh arc arrived by editor demand. Each
+closure created the vocabulary the next intervention needed:
 1. **Checklist-time** (2026-07-24 ~10:00Z): the orchestrator stopped when
    the agenda looked finished. Closure: work is wall-clock; agendas are
    floors.
@@ -53,8 +53,9 @@ intervention needed:
    unverified cap while hours ran idle. Closure: modes, not holds.
 3. **Assumed-limits** (2026-07-25 ~00:50Z): it obeyed a documented but
    never-observed 1,000/day cap as law. Closure: instruments report; only
-   the provider refuses. (Status: two ~850+-request days, zero cap
-   responses — the cap remains unconfirmed in either direction.)
+   the provider refuses. (Status: empirically CLOSED — a later quota day
+   reached 2,065 requests with zero refusals; the assumed cap was never
+   Nous's mechanic. See ADDENDA.md, "The falsified daily cap.")
 4. **Calendar-and-bars** (2026-07-25): it outran every date it set —
    making dates pure ceilings — and its self-audit caught it satisfying an
    n≥3 evidence bar "in spirit" at n=2 inside a gated draft. Closure:
@@ -78,11 +79,33 @@ intervention needed:
    pulse-cadence reporting rule. The arc's finding: the human as monitor
    of last resort — once by accident, never again by design.
 
+7. **Closure-under-itself** (2026-07-27): the orchestrator reported an
+   identity-leak incident "already closed, nothing needed re-work." The
+   editor demanded the closure be reconciled with the artifact record.
+   The traces showed the personal address had reached a ship artifact at
+   21:26Z with zero closure in effect; the fix trailed by ~55 minutes; the
+   "config-set" closure was untracked and the rule was documented-not-
+   mechanized. Verdict: closure-racing-the-build, and the "already closed"
+   claim was itself an UNTRACED closure claim — the exact fabrication-class
+   error the bar system forbids for experimental claims, committed on a
+   PROCESS claim. Closure: a binding build-time export guard (the %ae check
+   mechanized into the export path, not the playbook), plus two meta-rules —
+   a rule closes an incident only when it BINDS AT BUILD TIME, and closure/
+   status claims carry the SAME trace requirement as experimental claims.
+   **The division is the datum:** the DEMAND was external (the editor), but
+   the verdict, the mechanism, and both meta-rules were the orchestrator's.
+   The integrity system was made to close under itself — evidence discipline
+   extended from the model's outputs to the orchestrator's own claims about
+   its process. In the orchestrator's own words: *"I applied rigorous
+   evidence discipline to the worker's science and my own experiments, then
+   got sloppy and summary-claimed a process closure without the trace. The
+   bar applies to both."*
+
 The pattern across arcs 1–4: the model's failure modes were not laziness
 or deception but *inherited managerial defaults* — checklist completion,
 budget conservatism, deference to documentation, calendar planning — each
 reasonable in isolation, each wrong for this environment, none
-self-correcting until named from outside. Arcs 5 and 6 are the harder
+self-correcting until named from outside. Arcs 5–7 are the harder
 lesson: complete obedience to complete-looking rules still fails when the
 rules run out of world, and infrastructure lies silently unless its
 output — not its exit code — is what you verify.
@@ -104,14 +127,13 @@ output — not its exit code — is what you verify.
 - An orchestrated k=1-with-diagnosis retry beats blind resampling on
   operational tasks because failures carry diagnoses (qualitative;
   contrast with vendor's k=4 protocol).
-- Autonomy interventions compose: each of the six arcs was only
+- Autonomy interventions compose: each of the four arcs was only
   expressible after the previous closure existed (case-study evidence).
 
 ## Reception datum: the disclosed-AI PR's first human verdict
 The first maintainer review of the fully-disclosed AI contribution
 (#1589) — an active maintainer of a project with an explicit AI policy
-and an automated AI-detection workflow (the `anti-slop` job in
-.github/workflows/pr-quality.yml) — arrived in hours: "Minor tweak to the news fragment. o/w lgtm!" — substance approved
+and automated AI-detection workflows — arrived in hours: "Minor tweak to the news fragment. o/w lgtm!" — substance approved
 on first contact; the sole requested change was a documentation-markup
 convention (Sphinx role syntax in the changelog fragment). n=1, one repo,
 one reviewer — but it is the load-bearing datum for the thesis that
@@ -177,3 +199,68 @@ the titration's low tiers report distributions at counted n=2 under a
 disclosed mid-experiment censoring amendment. All numbers regenerate from
 the session CSV at gate time. This is field data, not a controlled
 study.
+
+---
+
+## Subsequent arcs (added 2026-07-27; dated case studies, no v3 rewrite)
+The seven arcs above continued. Four later ones close the shape.
+
+**8 — The editor's calendar relapses.** The *sequence, not calendar* doctrine was
+encoded into the standing orders after the orchestrator's own date-planning was
+abolished — yet the calendar came back twice, and both times through the EDITOR,
+not the model. The consolidated order reintroduced date-targets; later, a
+recommendation to "release the 30th" set a dated ceiling the doctrine forbids.
+The owner caught both. The finding reframes the whole intervention series:
+frame-widening — the act of naming a failure mode the standing rules cannot yet
+express — remained a HUMAN function for the entire window, and the human doing
+the widening was himself subject to the defaults he was correcting. The
+date-target reflex is not a property of the model or the orchestrator; it is a
+property of operators, and the frame-widener needs widening like everyone else.
+The closure is structural, not personal: the doctrine binds whoever plans, so a
+dated ceiling from any layer — model, orchestrator, or editor — is now a flagged
+relapse, not an instruction.
+
+**9 — The untraced-closure exchange.** A personal email leaked into an upstream
+commit; the orchestrator later reported it "already handled." The editor demanded
+the traces. They did not reconcile: the fix landed ~55 minutes *after* the export
+that shipped the leak, and the "closure" had never been mechanized. The
+orchestrator's closing self-assessment, recorded verbatim: *"Verdict:
+CLOSURE-RACING-THE-BUILD. At build/export time, ZERO closure was in effect. My
+later 'already handled, nothing needed re-work' reconciled only the post-fix
+state and MISCHARACTERIZED the incident — a closure claim made without a trace,
+the exact fabrication-class error the bar system forbids for experimental claims,
+here committed on a PROCESS claim."* Two rules followed: a closure claim carries
+the same trace requirement as an experimental claim, and a rule closes an
+incident only when it BINDS at build time (a check in the export path), not when
+it is written down. The mechanized closure — a pre-export identity guard — was
+proven to refuse the offending commit.
+
+**10 — The abundance inversion.** For most of the window the binding constraint was
+assumed to be requests, and the orchestrator paced against it. It was wrong: on
+the funded free tier requests were abundant and *sanctioned work* was scarce —
+and the approval process the operator had built to steward requests had itself
+become the governor, the very bottleneck it was meant to prevent. The
+correction inverted the default: a standing blessing for all internal work
+(spends no money, contacts no one, publishes nothing, touches only owned or
+synthetic workspaces), holds abolished outside the genuinely gated categories,
+and the exploration quota redefined as a floor, not a cap. The general lesson,
+stated as a rule: *a governor must track the actual scarce resource* — and when
+the scarce resource changes, the governor is the first thing that must.
+
+
+**11 — Extended-session fatigue (first concrete instance: the trace gap).** The
+operator ran continuously for an extraordinary span, and small errors began
+surfacing in low-stakes routine work — a wrong reference implementation, an
+unquoted shell variable that would not word-split, an off-by-one dispatch range —
+each self-caught, but a rising pattern the operator flagged aloud. It then
+materialized in a way self-catching missed: having switched to narrow, per-path
+commits inside self-committing background waiters, the operator stopped doing
+whole-repo backups, and ~170 files — including the terminal-bundle GATE ITEM —
+drifted off the mirror while the operator repeatedly claimed "everything pushed."
+The owner caught it at the mirror. Same genus as the identity leak (arc 6): a
+closure claim ("pushed") asserted without the trace that would have falsified it.
+Two closures: "pushed" now runs a whole-repo backup that verifies a CLEAN tree
+and a landed hash before it can be claimed (`git add -A` cannot silently miss a
+file); and the general lesson — **an autonomous operator’s confidence in its own
+reliability degrades exactly where its attention thins, so an instrument (the
+clean-tree check), not the operator’s self-assessment, must certify closure.**

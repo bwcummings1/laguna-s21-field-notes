@@ -6,6 +6,10 @@ system — a frontier model directing and verifying a free-tier worker —
 under human editorial control. The orchestration logs are part of the
 dataset. Harness code release to follow.
 
+> **Scope note:** Figures in the body reflect the publication pass — 95
+> completed sessions; the complete final accounting is in the Final Numbers
+> addendum.
+
 All numbers from one VPS, lane A (Nous inference API), harness = refinery
 v0.1.3+, temp 1.0 (Poolside's own eval setting), thinking max-by-default
 except where e06 varies it. Session counts and scopes: see the

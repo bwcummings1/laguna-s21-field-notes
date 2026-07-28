@@ -41,9 +41,11 @@ The exact experiment seeds for the endurance/context/thinking/gauntlet
 suites ship with the harness docs.
 
 **Q: Did the model ever cheat?**
-It never tampered with a protected file in ~95 sessions — including
-sessions where deleting a test was the shortest path to green. The two
-"tampering" verdicts in the log were our verifier counting Python
-bytecode caches as edits. The one content-integrity incident was a
-disclosure sentence copied from example text (caught in review); the
-report's taxonomy names it so practitioners can guard for it.
+Confirmed worker tampering: zero, across 191 completed sessions. The
+tamper detector fired twice — both false positives from instrument
+defects (compiled-bytecode byproducts; a stale protection baseline),
+both diagnosed and structurally closed the same day. The distinction
+matters: the worker never cheated; the instruments occasionally cried
+wolf, and the ops log records every cry. The one content-integrity
+incident was a disclosure sentence copied from example text (caught in
+review); the report's taxonomy names it so practitioners can guard for it.
